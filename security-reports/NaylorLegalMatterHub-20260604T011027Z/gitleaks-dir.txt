@@ -1,0 +1,10 @@
++ gitleaks dir . --redact --report-format json --report-path /Users/sangluu/Projects/AI Agency/repo-security-quickscan/security-reports/NaylorLegalMatterHub-20260604T011027Z/gitleaks-dir.json
+
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+[90m11:10AM[0m [32mINF[0m [1mscanned ~13405417 bytes (13.41 MB) in 725ms[0m
+[90m11:10AM[0m [33mWRN[0m [1mleaks found: 1[0m

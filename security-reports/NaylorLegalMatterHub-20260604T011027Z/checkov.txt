@@ -1,0 +1,1 @@
++ sh -c checkov -d . -o json > '/Users/sangluu/Projects/AI Agency/repo-security-quickscan/security-reports/NaylorLegalMatterHub-20260604T011027Z/checkov.json'

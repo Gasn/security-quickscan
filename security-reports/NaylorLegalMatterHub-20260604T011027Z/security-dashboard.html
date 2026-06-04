@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Security Scan Dashboard - NaylorLegalMatterHub</title>
+  <style>
+    :root { color-scheme: light; --bg: #f7f8fa; --panel: #fff; --ink: #17202a; --muted: #5c6670; --line: #d9dee5; --critical: #8b1d1d; --high: #b33a18; --medium: #a46a00; --low: #286140; --info: #315b8a; --ok: #1f6b45; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.45; }
+    header { padding: 28px 32px 20px; border-bottom: 1px solid var(--line); background: #fff; }
+    main { padding: 24px 32px 40px; max-width: 1500px; margin: 0 auto; }
+    h1 { margin: 0 0 8px; font-size: 28px; letter-spacing: 0; }
+    h2 { margin: 28px 0 12px; font-size: 18px; }
+    .meta, .muted { color: var(--muted); }
+    .topline { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; }
+    .badge { display: inline-flex; align-items: center; min-height: 28px; padding: 3px 10px; border: 1px solid var(--line); border-radius: 6px; font-weight: 700; background: #fff; }
+    .badge.pass { color: var(--ok); border-color: #a8cfba; }
+    .badge.warning, .badge.incomplete { color: var(--medium); border-color: #dec281; }
+    .badge.fail { color: var(--critical); border-color: #d7aaaa; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px; min-height: 92px; }
+    .card .label { color: var(--muted); font-size: 13px; }
+    .card .value { margin-top: 8px; font-size: 24px; font-weight: 800; overflow-wrap: anywhere; }
+    .tools { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+    .tool-title { display: flex; justify-content: space-between; gap: 10px; align-items: start; font-weight: 800; }
+    .tool-summary { margin-top: 10px; color: var(--muted); font-size: 14px; }
+    table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+    th, td { padding: 10px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); font-size: 14px; }
+    th { background: #eef1f4; font-size: 12px; text-transform: uppercase; letter-spacing: 0; color: #3b4650; }
+    tr:last-child td { border-bottom: 0; }
+    .sev { font-weight: 800; text-transform: capitalize; }
+    .sev.critical { color: var(--critical); }
+    .sev.high { color: var(--high); }
+    .sev.medium { color: var(--medium); }
+    .sev.low { color: var(--low); }
+    .sev.info { color: var(--info); }
+    .recommendation { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+    .checklist { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 8px 18px; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+    .checkitem { display: flex; gap: 8px; align-items: flex-start; }
+    .box { width: 15px; height: 15px; border: 1px solid #6f7b86; margin-top: 3px; flex: 0 0 auto; }
+    @media (max-width: 760px) { header, main { padding-left: 16px; padding-right: 16px; } table { display: block; overflow-x: auto; } }
+    @media print { body { background: #fff; } header, main { padding: 16px; } .card, table, .recommendation, .checklist { break-inside: avoid; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Security Scan Dashboard</h1>
+    <div class="topline">
+      <span class="meta">Repo: <strong>NaylorLegalMatterHub</strong></span>
+      <span class="meta">Generated: <strong>2026-06-04T01:12:34.731Z</strong></span>
+      <span class="badge fail">Overall: Fail</span>
+      <span class="badge fail">No-go</span>
+    </div>
+  </header>
+  <main>
+    <section class="grid"><div class="card"><div class="label">Critical findings</div><div class="value">2</div></div><div class="card"><div class="label">High findings</div><div class="value">0</div></div><div class="card"><div class="label">Medium findings</div><div class="value">6</div></div><div class="card"><div class="label">Low findings</div><div class="value">0</div></div><div class="card"><div class="label">Secrets found</div><div class="value">2</div></div><div class="card"><div class="label">Dependency vulnerabilities</div><div class="value">1</div></div><div class="card"><div class="label">SAST findings</div><div class="value">2</div></div><div class="card"><div class="label">Infrastructure findings</div><div class="value">3</div></div><div class="card"><div class="label">Dynamic scan findings</div><div class="value">0</div></div><div class="card"><div class="label">Build/typecheck/test</div><div class="value">Build: Not run: pnpm not installed | Typecheck: Not run: pnpm not installed | Tests: Not run: pnpm not installed</div></div></section>
+
+    <h2>Per-Tool Status</h2>
+    <section class="grid tools"><div class="card"><div class="tool-title"><span>OWASP ZAP</span><span class="badge not-run">Not run</span></div><div class="tool-summary">Not run: no target URL provided</div></div><div class="card"><div class="tool-title"><span>Package manager audit</span><span class="badge not-run">Not run</span></div><div class="tool-summary">Not run: pnpm not installed</div></div><div class="card"><div class="tool-title"><span>AI/manual review</span><span class="badge not-run">Not run</span></div><div class="tool-summary">Not run: security-reports/ai-review.md not found</div></div><div class="card"><div class="tool-title"><span>Build/typecheck/test</span><span class="badge incomplete">Incomplete</span></div><div class="tool-summary">Build: Not run: pnpm not installed | Typecheck: Not run: pnpm not installed | Tests: Not run: pnpm not installed</div></div><div class="card"><div class="tool-title"><span>Gitleaks</span><span class="badge fail">Fail</span></div><div class="tool-summary">2 secret finding(s)</div></div><div class="card"><div class="tool-title"><span>Semgrep</span><span class="badge warning">Warning</span></div><div class="tool-summary">2 SAST finding(s)</div></div><div class="card"><div class="tool-title"><span>OSV-Scanner</span><span class="badge warning">Warning</span></div><div class="tool-summary">1 dependency vulnerability finding(s)</div></div><div class="card"><div class="tool-title"><span>Checkov</span><span class="badge warning">Warning</span></div><div class="tool-summary">3 infrastructure finding(s)</div></div><div class="card"><div class="tool-title"><span>Trivy</span><span class="badge pass">Pass</span></div><div class="tool-summary">0 dependency vulnerability finding(s)</div></div></section>
+
+    <h2>Go/No-Go Recommendation</h2>
+    <section class="recommendation">
+      <p><strong>No-go.</strong> verified or untriaged secret finding exists; critical finding exists</p>
+      <p class="muted">This dashboard is local-only and summarizes scanner output. It does not replace human review for business logic, authorization, data exposure, or production deployment decisions.</p>
+    </section>
+
+    <h2>Finding Register</h2>
+    <table>
+      <thead><tr><th>Severity</th><th>Tool</th><th>Title</th><th>Affected file/package/path</th><th>Risk / description</th><th>Recommended action</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td class="sev critical">critical</td><td>Gitleaks</td><td>generic-api-key</td><td>artifacts/api-server/src/lib/deadlines.ts:39</td><td>Potential secret [redacted] Full secret [redacted] is redacted by the scanner/dashboard.</td><td>Rotate the secret, remove it from source/history, and verify it is no longer valid.</td><td contenteditable="true">Open</td></tr><tr><td class="sev critical">critical</td><td>Gitleaks</td><td>generic-api-key</td><td>artifacts/api-server/src/lib/deadlines.ts:39</td><td>Potential secret [redacted] Full secret [redacted] is redacted by the scanner/dashboard.</td><td>Rotate the secret, remove it from source/history, and verify it is no longer valid.</td><td contenteditable="true">Open</td></tr><tr><td class="sev medium">medium</td><td>Checkov</td><td>CKV_OPENAPI_5 Ensure that security operations is not empty.</td><td>/lib/api-spec/openapi.yaml | security</td><td>https://docs.prismacloud.io/en/enterprise-edition/policy-reference/api-policies/openapi-policies/ensure-that-security-operations-is-not-empty</td><td>Adjust infrastructure/configuration or document why the control is not applicable.</td><td contenteditable="true">Open</td></tr><tr><td class="sev medium">medium</td><td>Checkov</td><td>CKV_OPENAPI_4 Ensure that the global security field has rules defined</td><td>/lib/api-spec/openapi.yaml | security</td><td>https://docs.prismacloud.io/en/enterprise-edition/policy-reference/api-policies/openapi-policies/ensure-that-the-global-security-field-has-rules-defined</td><td>Adjust infrastructure/configuration or document why the control is not applicable.</td><td contenteditable="true">Open</td></tr><tr><td class="sev medium">medium</td><td>Checkov</td><td>CKV_OPENAPI_21 Ensure that arrays have a maximum number of items</td><td>/lib/api-spec/openapi.yaml | paths</td><td>https://docs.prismacloud.io/en/enterprise-edition/policy-reference/api-policies/openapi-policies/bc-openapi-21</td><td>Adjust infrastructure/configuration or document why the control is not applicable.</td><td contenteditable="true">Open</td></tr><tr><td class="sev medium">medium</td><td>OSV-Scanner</td><td>GHSA-q8mj-m7cp-5q26 qs has a remotely triggerable DoS: qs.stringify crashes with TypeError on null/undefined entries in comma-format arrays when encodeValuesOnly is set</td><td>npm:qs 6.15.1</td><td>CVE-2026-8723</td><td>Update to a non-vulnerable version or document the accepted risk.</td><td contenteditable="true">Open</td></tr><tr><td class="sev medium">medium</td><td>Semgrep</td><td>The call to &#39;createDecipheriv&#39; with the Galois Counter Mode (GCM) mode of operation is missing an expected authentication tag length. If the expected authentication tag length is not specified or otherwise checked, the application might be tricked into verifying a shorter-than...</td><td>artifacts/api-server/src/lib/crypto.ts:57</td><td>javascript.node-crypto.security.gcm-no-tag-length.gcm-no-tag-length | CWE-310: CWE CATEGORY: Cryptographic Issues | A02:2021 - Cryptographic Failures | A04:2025 - Cryptographic Failures</td><td>Review the data flow and apply the rule guidance or documented compensating control.</td><td contenteditable="true">Open</td></tr><tr><td class="sev medium">medium</td><td>Semgrep</td><td>The call to &#39;createDecipheriv&#39; with the Galois Counter Mode (GCM) mode of operation is missing an expected authentication tag length. If the expected authentication tag length is not specified or otherwise checked, the application might be tricked into verifying a shorter-than...</td><td>artifacts/api-server/src/lib/crypto.ts:57</td><td>javascript.node-crypto.security.gcm-no-tag-length.gcm-no-tag-length | CWE-310: CWE CATEGORY: Cryptographic Issues | A02:2021 - Cryptographic Failures | A04:2025 - Cryptographic Failures</td><td>Review the data flow and apply the rule guidance or documented compensating control.</td><td contenteditable="true">Open</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Manual Review Checklist</h2>
+    <section class="checklist"><div class="checkitem"><span class="box"></span><span>Secrets rotated or confirmed false positive</span></div><div class="checkitem"><span class="box"></span><span>Critical and high findings triaged</span></div><div class="checkitem"><span class="box"></span><span>Authentication and authorization paths reviewed</span></div><div class="checkitem"><span class="box"></span><span>Sensitive data exposure and logging reviewed</span></div><div class="checkitem"><span class="box"></span><span>Dependency updates or exceptions documented</span></div><div class="checkitem"><span class="box"></span><span>Infrastructure findings remediated or accepted</span></div><div class="checkitem"><span class="box"></span><span>Build and typecheck pass locally</span></div><div class="checkitem"><span class="box"></span><span>Tests pass or missing tests are explicitly accepted</span></div><div class="checkitem"><span class="box"></span><span>AI/manual review completed or marked not required</span></div></section>
+
+    <h2>Reviewer Notes</h2>
+    <section class="recommendation" contenteditable="true">
+      Add local review notes, owner assignments, accepted-risk rationale, or final approval details here.
+    </section>
+  </main>
+</body>
+</html>

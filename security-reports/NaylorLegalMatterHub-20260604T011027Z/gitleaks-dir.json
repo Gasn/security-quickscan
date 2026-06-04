@@ -1,0 +1,22 @@
+[
+ {
+  "RuleID": "generic-api-key",
+  "Description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+  "StartLine": 39,
+  "EndLine": 39,
+  "StartColumn": 6,
+  "EndColumn": 28,
+  "Match": "key: \"REDACTED\"",
+  "Secret": "REDACTED",
+  "File": "artifacts/api-server/src/lib/deadlines.ts",
+  "SymlinkFile": "",
+  "Commit": "",
+  "Entropy": 3.5778196,
+  "Author": "",
+  "Email": "",
+  "Date": "",
+  "Message": "",
+  "Tags": [],
+  "Fingerprint": "artifacts/api-server/src/lib/deadlines.ts:generic-api-key:39"
+ }
+]

@@ -1,0 +1,33 @@
++ semgrep scan --config auto --json -o /Users/sangluu/Projects/AI Agency/repo-security-quickscan/security-reports/NaylorLegalMatterHub-20260604T011027Z/semgrep.json .
+               
+               
+┌─────────────┐
+│ Scan Status │
+└─────────────┘
+  Scanning 376 files tracked by git with 1059 Code rules:
+                                                                                                                        
+  Language      Rules   Files          Origin      Rules                                                                
+ ─────────────────────────────        ───────────────────                                                               
+  <multilang>      61     376          Community    1059                                                                
+  ts              163     319                                                                                           
+  json              4      20                                                                                           
+  yaml             31       3                                                                                           
+  html              1       2                                                                                           
+  js              153       1                                                                                           
+  bash              4       1                                                                                           
+                                                                                                                        
+                
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ Scan completed successfully.
+ • Findings: 1 (1 blocking)
+ • Rules run: 261
+ • Targets scanned: 376
+ • Parsed lines: ~99.9%
+ • Scan skipped: 
+   ◦ Files larger than  files 1.0 MB: 7
+ • Scan was limited to files tracked by git
+ • For a detailed list of skipped files and lines, run semgrep with the --verbose flag
+Ran 261 rules on 376 files: 1 finding.

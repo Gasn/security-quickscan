@@ -1,0 +1,5 @@
++ sh -c osv-scanner scan -r . --format json > '/Users/sangluu/Projects/AI Agency/repo-security-quickscan/security-reports/NaylorLegalMatterHub-20260604T011027Z/osv.json'
+Scanning dir .
+Starting filesystem walk for root: /
+Scanned /Users/sangluu/Projects/AI Agency/clients/NaylorLegalMatterHub/pnpm-lock.yaml file and found 507 packages
+End status: 73 dirs visited, 488 inodes visited, 1 Extract calls, 17.746666ms elapsed, 17.746ms wall time

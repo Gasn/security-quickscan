@@ -1,0 +1,5 @@
++ sh -c osv-scanner scan -r . --format json > '/Users/sangluu/Projects/AI Agency/repo-security-quickscan/security-reports/nayconnexus-20260604T011428Z/osv.json'
+Scanning dir .
+Starting filesystem walk for root: /
+Scanned /Users/sangluu/Projects/AI Agency/clients/nayconnexus/pnpm-lock.yaml file and found 1434 packages
+End status: 109 dirs visited, 734 inodes visited, 1 Extract calls, 34.122583ms elapsed, 34.124ms wall time

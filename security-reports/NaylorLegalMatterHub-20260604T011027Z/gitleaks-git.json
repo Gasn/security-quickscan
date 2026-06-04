@@ -1,0 +1,23 @@
+[
+ {
+  "RuleID": "generic-api-key",
+  "Description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+  "StartLine": 39,
+  "EndLine": 39,
+  "StartColumn": 6,
+  "EndColumn": 28,
+  "Match": "key: \"REDACTED\"",
+  "Secret": "REDACTED",
+  "File": "artifacts/api-server/src/lib/deadlines.ts",
+  "SymlinkFile": "",
+  "Commit": "3fb533101592ec91116ea0ef87018fa1bae513b6",
+  "Link": "https://github.com/snaylorappgal/NaylorLegalMatterHub/blob/3fb533101592ec91116ea0ef87018fa1bae513b6/artifacts/api-server/src/lib/deadlines.ts#L39",
+  "Entropy": 3.5778196,
+  "Author": "Replit Agent",
+  "Email": "agent@replit.com",
+  "Date": "2026-06-01T04:11:11Z",
+  "Message": "Integrate new authentication and routing, seed database, and generate API schemas\n\nAdds Clerk authentication middleware, proxy middleware, and updates package dependencies. Implements database seeding and registers new API routes including HR, matters, and audit functionalities. Updates generated API schemas and client configurations.\n\nReplit-Commit-Author: Agent\nReplit-Commit-Session-Id: b1c35629-a979-4575-bc3c-f177840cf5f6\nReplit-Commit-Checkpoint-Type: full_checkpoint\nReplit-Commit-Event-Id: b734d952-7236-4491-9f3d-19c44b802755\nReplit-Commit-Screenshot-Url: https://storage.googleapis.com/screenshot-production-us-central1/53716fa9-79f8-46fe-95ed-2f7bbf58f9bc/b1c35629-a979-4575-bc3c-f177840cf5f6/hr2i8pE\nReplit-Helium-Checkpoint-Created: true",
+  "Tags": [],
+  "Fingerprint": "3fb533101592ec91116ea0ef87018fa1bae513b6:artifacts/api-server/src/lib/deadlines.ts:generic-api-key:39"
+ }
+]

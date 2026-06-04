@@ -1,0 +1,36 @@
++ semgrep scan --config auto --json -o /Users/sangluu/Projects/AI Agency/repo-security-quickscan/security-reports/nayconnexus-20260604T011428Z/semgrep.json .
+               
+               
+┌─────────────┐
+│ Scan Status │
+└─────────────┘
+  Scanning 589 files tracked by git with 1059 Code rules:
+                                                                                                                        
+  Language      Rules   Files          Origin      Rules                                                                
+ ─────────────────────────────        ───────────────────                                                               
+  <multilang>      61     589          Community    1059                                                                
+  ts              163     438                                                                                           
+  json              4      25                                                                                           
+  js              153       8                                                                                           
+  yaml             31       3                                                                                           
+  html              1       3                                                                                           
+  bash              4       1                                                                                           
+                                                                                                                        
+                
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ Scan completed successfully.
+ • Findings: 26 (26 blocking)
+ • Rules run: 261
+ • Targets scanned: 589
+ • Parsed lines: ~99.9%
+ • Scan skipped: 
+   ◦ Files larger than  files 1.0 MB: 2
+ • Scan was limited to files tracked by git
+ • For a detailed list of skipped files and lines, run semgrep with the --verbose flag
+Ran 261 rules on 589 files: 26 findings.
+
+📢 Too many findings? Try Semgrep Pro for more powerful queries and less noise.
+   See https://sg.run/false-positives.
