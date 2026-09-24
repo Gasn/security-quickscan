@@ -1,1 +1,3 @@
 FactoryOS Durable Observe acceptance probe.
+
+Second pass: verify shadow comparison and protected-check cutover.
