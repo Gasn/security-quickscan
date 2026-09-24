@@ -1,3 +1,5 @@
 FactoryOS Durable Observe acceptance probe.
 
 Second pass: verify shadow comparison and protected-check cutover.
+
+Third pass: single-writer publisher cutover acceptance.
